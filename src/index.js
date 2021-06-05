@@ -1,17 +1,36 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+function Card(props){
+  return (
+    <div>
+      <h2>{props.name}</h2>
+    <img
+      src={props.img}
+      alt="avatar_img"
+    />
+    <p>{props.tel}</p>
+    <p>{props.email}</p>
+    </div>
+  );
+}
+
 ReactDOM.render(
   <div>
     <h1>My Contacts</h1>
-
-    <h2>Beyonce</h2>
-    <img
-      src="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg"
-      alt="avatar_img"
+    <Card 
+    name="Beyonce" 
+    img="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg" 
+    tel="+123 456 789" 
+    email="b@beyonce.com"
     />
-    <p>+123 456 789</p>
-    <p>b@beyonce.com</p>
+    <Card 
+      name="Cody"
+      img="https://pbs.twimg.com/media/DWVaqfoVAAAix6F.jpg"
+      tel="760-669-9343"
+      email="Cody McKeon"
+    />
+    
 
     <h2>Jack Bauer</h2>
     <img
@@ -31,3 +50,4 @@ ReactDOM.render(
   </div>,
   document.getElementById("root")
 );
+
